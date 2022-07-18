@@ -45,14 +45,3 @@ export function HomeEvents() {
     })
 }
 
-// let imgButton = document.getElementById('img-button')
-//
-//     imgButton.addEventListener('click', function(){
-//     let i = 1;
-//     this.setAttribute("src", `jalopyPractice/assets/jalopy${i}.jpeg`)
-//     i+= 1;
-//     if(i > 3){
-//         i = 0;
-//     }
-//
-// })
