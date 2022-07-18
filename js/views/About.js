@@ -1,4 +1,3 @@
-import {showNotification} from "../messaging.js";
 
 export default function About(props) {
     // language=HTML
@@ -40,6 +39,11 @@ export default function About(props) {
 </main>
     `;
 }
+
+function changeAboutText() {
+    document.querySelector("#about-text").innerText = "Hello World!";
+}
+
 export function AboutEvents() {
-    showNotification("Hey, a message!", "danger");
+    document.querySelector("#change-about-text").addEventListener("click", changeAboutText);
 }
