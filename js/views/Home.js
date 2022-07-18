@@ -38,7 +38,6 @@ export function HomeEvents() {
     imgButton.addEventListener('click', function(e){
         imageJalopy.setAttribute("src", `jalopyPractice/assets/jalopy${i}.jpeg`)
         i+= 1;
-        console.log(i);
         if(i > 3){
             i = 1;
         }
