@@ -6,7 +6,7 @@ const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 export default function Home(props) {
     return `
         <header>
-            <h1>Home Page</h1>
+            <h1 style ="text-align: center">HELLO JALOPY</h1>
         </header>
         <main>
             <div>
@@ -21,10 +21,10 @@ export default function Home(props) {
 export function HomeEvents() {
     // TODO: use an enum for message type
     // const authority = getUserRole();
-    const user = getUser();
-    if(!user) {
-        showNotification("Welcome visitor", "secondary");
-    } else {
-        showNotification("Welcome " + user.userName, "info");
-    }
+    // const user = getUser();
+    // if(!user) {
+    //     showNotification("Welcome visitor", "secondary");
+    // } else {
+    //     showNotification("Welcome " + user.userName, "info");
+    // }
 }
