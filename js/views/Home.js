@@ -3,6 +3,7 @@ import {getUser} from "../auth.js";
 
 const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 
+
 export default function Home(props) {
     return `
         <header>
@@ -10,10 +11,11 @@ export default function Home(props) {
         </header>
         <main>
             <div>
-            <img src="assets" alt="">
+            <img id="imageJalopy" src="jalopyPractice/assets/jalopy1.jpeg"  alt="jalopy1">
                 <p>
-                    This is the home page text.
+                    "Welcome to my Jalopy application!"
                 </p>    
+                <button id="img-button">Change Image</button>
             </div>
         </main>
     `;
@@ -28,4 +30,30 @@ export function HomeEvents() {
     // } else {
     //     showNotification("Welcome " + user.userName, "info");
     // }
+    // i is used to iterate through images.
+    let i = 2;
+    let imageJalopy = document.getElementById("imageJalopy");
+    let imgButton = document.getElementById('img-button');
+
+    imgButton.addEventListener('click', function(e){
+        imageJalopy.setAttribute("src", `jalopyPractice/assets/jalopy${i}.jpeg`)
+        i+= 1;
+        console.log(i);
+        if(i > 3){
+            i = 1;
+        }
+
+    })
 }
+
+// let imgButton = document.getElementById('img-button')
+//
+//     imgButton.addEventListener('click', function(){
+//     let i = 1;
+//     this.setAttribute("src", `jalopyPractice/assets/jalopy${i}.jpeg`)
+//     i+= 1;
+//     if(i > 3){
+//         i = 0;
+//     }
+//
+// })
