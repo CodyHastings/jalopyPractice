@@ -4,7 +4,7 @@ export default function QuotesView(props) {
     <h1>Dog Facts</h1>
     <div class="card">
         <div class="card-body">
-            <p class="dog-fact" style="visibility: hidden">Humans generally see better than dogs, but dogs see much better when there is low-light.</p>
+            <p id="my-quotes" style="visibility: hidden"></p>
         </div>
     </div>
     <button class="form-control" id="show-fact-btn">Show Fact</button>
