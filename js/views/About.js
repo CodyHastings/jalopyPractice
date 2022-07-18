@@ -1,5 +1,5 @@
 
-export default function About(props) {
+export default function AboutView(props) {
     // language=HTML
     return `
 <header>
