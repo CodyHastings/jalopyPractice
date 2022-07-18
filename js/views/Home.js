@@ -10,6 +10,7 @@ export default function Home(props) {
         </header>
         <main>
             <div>
+            <img src="assets" alt="">
                 <p>
                     This is the home page text.
                 </p>    
