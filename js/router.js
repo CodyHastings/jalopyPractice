@@ -81,8 +81,8 @@ export default function router(URI) {
         '/quotes': {
             returnView: QuotesView,
             state: {},
-            uri: '/dogs',
-            title: 'Dog Facts',
+            uri: '/quotes',
+            title: 'quotes',
             viewEvent: QuotesEvents
         }
     };
