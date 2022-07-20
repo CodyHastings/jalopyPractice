@@ -16,13 +16,16 @@ let quotesArr = ['Quote 1: "War is organized murder and torture against our brot
 
     'Quote 9: "Men, when they fight in movies, it\'s a very different style. Harrison Ford was so cool when he had the whip, and Bruce Lee was such an artist that you couldn\'t take your eyes off of him." Quthor: "Lucy Liu"',
 
-]
-
+];
+// let quotes = document.getElementById('my-quotes');
 
 
 
 export default function QuotesView(props) {
 
+    // for (let i = 0; i < quotesArr.length; i++){
+    //         addQuote(quotesArr[i]);
+    // }
 
     return `
 <div class="container">
@@ -48,4 +51,9 @@ export function QuotesEvents() {
 
 addQuote()
 
+
 }
+
+// function addQuote(quote){
+//     quotes.innerText += quote + '\n \n' ;
+// }
