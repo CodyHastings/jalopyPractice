@@ -88,7 +88,15 @@ export default function router(URI) {
         },
         '/quotes': {
             returnView: QuotesView,
-            state: {},
+            state: {
+                quotes: {
+                    url: "https://quotes.fulgentcorp.com:12250/v1/quotes?random=true&limit=10",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': DOG_QUOTE_API_KEY
+                    }
+                }
+            },
             uri: '/quotes',
             title: 'quotes',
             viewEvent: QuotesEvents

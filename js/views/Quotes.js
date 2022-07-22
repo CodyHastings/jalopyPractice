@@ -17,22 +17,22 @@ let quotesArr = ['Quote 1: "War is organized murder and torture against our brot
     'Quote 9: "Men, when they fight in movies, it\'s a very different style. Harrison Ford was so cool when he had the whip, and Bruce Lee was such an artist that you couldn\'t take your eyes off of him." Quthor: "Lucy Liu"',
 
 ];
-// let quotes = document.getElementById('my-quotes');
+
 
 
 
 export default function QuotesView(props) {
-
-    // for (let i = 0; i < quotesArr.length; i++){
-    //         addQuote(quotesArr[i]);
-    // }
 
     return `
 <div class="container">
     <h1>QUOTES</h1>
     <div class="card">
         <div class="card-body">
-            <div id="my-quotes"></div>
+<!--            <div id="my-quotes"></div>-->
+            <div>
+                ${addQuotes(quotesArr)}
+                
+            </div>
         </div>
     </div>
 <!--    <button class="form-control" id="show-fact-btn">Show Fact</button>-->
@@ -41,19 +41,27 @@ export default function QuotesView(props) {
 }
 
 export function QuotesEvents() {
-    let quotes = document.getElementById('my-quotes')
-
-    function addQuote(){
-        for (let i = 0; i < quotesArr.length; i++){
-            quotes.innerText += quotesArr[i] + '\n \n' ;
-        }
-    }
-
-addQuote()
-
 
 }
 
-// function addQuote(quote){
-//     quotes.innerText += quote + '\n \n' ;
-// }
+
+function addQuotes(quotes){
+
+    let htmlString = ''
+    for (let i = 0; i < quotes.length; i++){
+      htmlString += `<br> ${quotes[i]} <br>`;
+      // htmlString =+
+      //     <div class="front-card">
+      //       quotes[i].author
+      //     </div>
+      //     <div class="back-card">
+      //       quotes[i].quoteText
+      //     </div>
+    }
+    return htmlString;
+
+}
+
+
+
+
