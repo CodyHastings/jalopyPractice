@@ -11,7 +11,7 @@ export default function Home(props) {
         </header>
         <main>
             <div>
-            <img id="imageJalopy" src="jalopyPractice/assets/jalopy1.jpeg"  alt="jalopy1">
+            <img id="imageJalopy" src="/assets/jalopy1.jpeg"  alt="jalopy1">
                 <p>
                     "Welcome to my Jalopy application!"
                 </p>    
