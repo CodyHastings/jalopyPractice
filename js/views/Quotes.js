@@ -22,6 +22,8 @@ let quotesArr = ['Quote 1: "War is organized murder and torture against our brot
 
 
 export default function QuotesView(props) {
+    console.log(props);
+
 
     return `
 <div class="container">
@@ -30,13 +32,14 @@ export default function QuotesView(props) {
         <div class="card-body">
 <!--            <div id="my-quotes"></div>-->
             <div>
-                ${addQuotes(quotesArr)}
+                ${addQuotes(props)}
                 
             </div>
         </div>
     </div>
 <!--    <button class="form-control" id="show-fact-btn">Show Fact</button>-->
 </div>
+<a data-link href="/insertquote">Insert a New Quote</a>
 `;
 }
 
@@ -46,10 +49,12 @@ export function QuotesEvents() {
 
 
 function addQuotes(quotes){
-
+    console.log(quotes);
+    console.log(quotes.quotes[0]);
     let htmlString = ''
-    for (let i = 0; i < quotes.length; i++){
-      htmlString += `<br> ${quotes[i]} <br>`;
+    for (let i = 0; i < quotes.quotes.length; i++){
+
+      htmlString += `<br> ${quotes.quotes[i].author} <br>${quotes.quotes[i].quote}`;
       // htmlString =+
       //     <div class="front-card">
       //       quotes[i].author
@@ -58,6 +63,7 @@ function addQuotes(quotes){
       //       quotes[i].quoteText
       //     </div>
     }
+    console.log(htmlString);
     return htmlString;
 
 }
