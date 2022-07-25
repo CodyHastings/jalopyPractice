@@ -10,6 +10,7 @@ export default function DogFactsView(props) {
     
     <button class="form-control" id="show-fact-btn">Show Facts</button>
 </div>
+<a data-link href="/insert-dog-fact">Insert Dog Fact</a>
 `;
 }
 
