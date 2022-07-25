@@ -10,6 +10,7 @@ import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
 import DogFactsView, {DogFactsEvents} from "./views/DogFacts.js";
 import QuotesView, {QuotesEvents} from "./views/Quotes.js";
+import InsertDogView, {InsertDogFactEvents} from "./views/AddDogFact.js";
 /**
  * Returns the route object for a specific route based on the given URI
  * @param URI
@@ -85,6 +86,13 @@ export default function router(URI) {
             uri: '/dogs',
             title: 'Dog Facts',
             viewEvent: DogFactsEvents
+        },
+        '/insert-dog-fact': {
+            returnView: InsertDogView,
+            state: {},
+            uri: '/insert-dog-fact',
+            title: 'Insert Dog Fact',
+            viewEvent: InsertDogFactEvents
         },
         '/quotes': {
             returnView: QuotesView,
